@@ -16,14 +16,14 @@ func main() {
 
 	router := gin.Default()
 
-	router.GET("/", func(c *gin.Context) {
+	router.GET("/api/account", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
-			"msg": "Hi primz...",
+			"msg": "Hi primz.....",
 		})
 	})
 
 	server := http.Server{
-		Addr:    ":5000",
+		Addr:    ":8080",
 		Handler: router,
 	}
 
